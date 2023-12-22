@@ -13,7 +13,15 @@ $(document).ready(function(){
 
     // VARIABLE PARA RECOGER LOS VALORES QUE HAY MARCADO //
     var arrayJugadas = [];
-
+    // generacion dinamica de los objetos div //
+    var texto = ""
+    var objetoDiv = ""
+    for(let i = 1; i <= 9; i++){
+        texto = "<div id=" + i +""+ "></div>"
+        objetoDiv += texto
+    }
+    $("#tablero").append(objetoDiv)
+    
     // PRIMERA OPCION PROBADA LLAMANDO A LAS FUNCIONES POR SEPARADO //
     // PROBADO CON FUNCION "PINTAR" COMUN Y CON FUNCIONES POR SEPARADO PINTARROJO Y PINTARAZUL//
     // botonRojo.click(pintar(rojo))
